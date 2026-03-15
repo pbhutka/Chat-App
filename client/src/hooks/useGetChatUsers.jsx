@@ -9,7 +9,7 @@ const useGetChatUsers = () => {
     const fetchChatUsers = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/messages/users/chatted",
+          `${import.meta.env.VITE_API_URL}/messages/users/chatted`,
           {
             withCredentials: true,
           },

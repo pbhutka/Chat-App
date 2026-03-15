@@ -47,7 +47,7 @@ function Sidebar() {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/user/logout", {},
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/user/logout`, {},
         {withCredentials: true}
       );
       dispatch(setOtherUsers(null));
@@ -57,7 +57,7 @@ function Sidebar() {
       navigate("/login");
       toast.success(res.data.message);
     } catch (err) {
-      // console.log("Logout Error:", err.response?.data || err.message);
+      console.log("Logout Error:", err.response?.data || err.message);
     }
   };
 

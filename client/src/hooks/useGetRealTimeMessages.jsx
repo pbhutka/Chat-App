@@ -42,7 +42,7 @@ const useGetRealTimeMessages = () => {
       } else {
         // User not in list, fetch from backend to get full user details
         try {
-          const res = await axios.get("http://localhost:5000/messages/users/chatted", {
+          const res = await axios.get(`${import.meta.env.VITE_API_URL}/messages/users/chatted`, {
             withCredentials: true,
           });
           dispatch(setChatUsers(res.data));

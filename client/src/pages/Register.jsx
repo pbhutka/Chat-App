@@ -13,7 +13,7 @@ function Register() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/user/register",
+        `${import.meta.env.VITE_API_URL}/user/register`,
         { firstName, lastName, email, password },
         { withCredentials: true },
       );

@@ -16,7 +16,7 @@ const MessageInput = () => {
     if (!message.trim()) return;
 
     const res = await axios.post(
-      `http://localhost:5000/messages/send/${selectedUser._id}`,
+      `${import.meta.env.VITE_API_URL}/messages/send/${selectedUser._id}`,
       { message },
       { withCredentials: true },
     );

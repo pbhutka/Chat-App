@@ -15,7 +15,7 @@ function Dashboard() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/user/me", {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/user/me`, {
           withCredentials: true,
         });
 

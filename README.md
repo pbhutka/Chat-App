@@ -50,7 +50,7 @@ Express, and WebSockets.
 ---
 
 ## 📂 Project Structure
-
+```
 └── 📁client
     └── 📁src
         └── 📁assets
@@ -114,7 +114,7 @@ Express, and WebSockets.
     ├── package.json
     └── server.js
 
-
+```
 ---
 
 ## ⚙️ How It Works

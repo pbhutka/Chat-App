@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify"
+
+import { AtSign } from "lucide-react";
+
 function Register() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -11,6 +14,13 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(password.length < 8){
+      toast.warning("Password must be at least 8 characters long.")
+      return;
+    }
+
+
+
     try {
       const res = await axios.post(
         `${import.meta.env.VITE_API_URL}/user/register`,
@@ -38,13 +48,9 @@ function Register() {
   return (
     <>
       <div className="flex min-h-screen flex-col justify-center px-6 py-12 lg:px-8 bg-white dark:bg-zinc-950 transition-colors duration-300">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            alt="Your Company"
-            src="https://companieslogo.com/img/orig/LLY-a89a5a37.png?t=1722952494"
-            className="mx-auto h-10 w-auto invert"
-          />
-          <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-zinc-900 dark:text-white">
+        <div className="sm:mx-auto sm:w-full justify-center items-center sm:max-w-sm">
+          <AtSign className="h-10 w-10 mx-auto text-zinc-900 dark:text-white" />
+          <h2 className="mt-5 text-center text-2xl/9 font-bold tracking-tight text-zinc-900 dark:text-white">
             Create new Account
           </h2>
         </div>

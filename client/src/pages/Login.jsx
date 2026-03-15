@@ -4,7 +4,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setAuthUser } from "../redux/userSlice";
 import { toast } from "react-toastify";
-
+import { AtSign } from "lucide-react";
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -12,6 +12,8 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
+
+    
     e.preventDefault();
     try {
       const res = await axios.post(
@@ -40,14 +42,9 @@ function Login() {
     <>
       {/* Container: White in light mode, Zinc-950 in dark mode */}
       <div className="flex min-h-screen flex-col justify-center px-6 py-12 lg:px-8 bg-white dark:bg-zinc-950 transition-colors duration-300">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            alt="Your Company"
-            src="https://companieslogo.com/img/orig/LLY-a89a5a37.png?t=1722952494"
-            // Invert only in dark mode to keep it visible
-            className="mx-auto h-10 w-auto invert"
-          />
-          <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-zinc-900 dark:text-white">
+        <div className="sm:mx-auto sm:w-full justify-center items-center sm:max-w-sm">
+          <AtSign className="h-10 w-10 mx-auto text-zinc-900 dark:text-white"/>
+          <h2 className="mt-5 text-center text-2xl/9 font-bold tracking-tight text-zinc-900 dark:text-white">
             Sign in to your account
           </h2>
         </div>
@@ -126,7 +123,7 @@ function Login() {
           </form>
 
           <p className="mt-10 text-center text-sm/6 text-zinc-500 dark:text-zinc-400">
-            or{" "}
+            Don't have an account?{" "}
             <Link
               to="/"
               className="font-semibold text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white transition-colors"

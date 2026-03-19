@@ -1,6 +1,6 @@
-# PingMe  Real-Time MERN Chat Application
+# Real-Time MERN Chat Application
 
-PingMe is a real-time one-to-one messaging application built using the
+This is a real-time one-to-one messaging application built using the
 MERN stack with Socket.IO for live communication. It provides instant
 messaging, online user presence, and persistent chat history stored in
 MongoDB.
@@ -174,44 +174,15 @@ When a user opens a conversation:
     Messages loaded into Redux state
             ↓
     Displayed in chat window
-
----
-
-## 📸 Screenshots
-
-Add screenshots here once the app is deployed or running locally.
-
-### Login Page
-
-![Login Screenshot](./screenshots/login.png)
-
-### Register Page
-
-![Register Screenshot](./screenshots/register.png)
-
-### Chat Dashboard
-
-![Dashboard Screenshot](./screenshots/dashboard.png)
-
-### Chat Conversation
-
-![Chat Screenshot](./screenshots/chat.png)
-
-### Online Users
-
-![Online Users Screenshot](./screenshots/online-users.png)
-
-Create a `/screenshots` folder in the repository and add these images
-later.
-
+    
 ---
 
 ## 🛠 Installation
 
 ### 1️⃣ Clone the repository
 
-    git clone https://github.com/pbhutka/MERN-SOCKET.git
-    cd MERN-SOCKET
+    git clone https://github.com/pbhutka/Chat-App.git
+    cd Chat-App
 
 ### 2️⃣ Install dependencies
 
@@ -260,12 +231,6 @@ Deployment links will be added here later.
 
     Frontend: (coming soon)
     Backend: (coming soon)
-
-Recommended setup:
-
-    Frontend → Vercel
-    Backend → Render
-    Database → MongoDB Atlas
 
 ---
 
